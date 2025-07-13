@@ -1,5 +1,6 @@
 import { createAction, handleActions } from "redux-actions";
 import { takeLatest, call, put } from "redux-saga/effects";
+import Cookies from "js-cookie";
 import * as api from "../lib/api";
 import client from "../lib/client";
 
@@ -53,6 +54,9 @@ function* loginSaga(action) {
         yield put(setAccessToken(accessToken));
 
         client.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+
+        // 쿠키에 토큰저장
+        Cookies.set("accessToken", accessToken, { expires: 1 });
 
     }catch(e) {
         console.log("loginSaga error = " + e);

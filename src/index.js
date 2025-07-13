@@ -6,6 +6,30 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureStore from './store';
+import Cookies from "js-cookie";
+import { setAccessToken, checkMyInfo } from './modules/auth';
+import client from "./lib/client";
+
+function loadUser() {
+  try {
+    const savedToken = Cookies.get("accessToken");
+
+    if (!savedToken) {
+      return;
+    }
+
+    configureStore.dispatch(setAccessToken(savedToken));
+
+    client.defaults.headers.common.Authorization = `Bearer ${savedToken}`;
+
+    configureStore.dispatch(checkMyInfo());
+
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+loadUser();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
