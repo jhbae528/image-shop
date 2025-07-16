@@ -10,7 +10,7 @@ function CodeGroupList({ codeGroupList, isLoading }) {
             {isLoading && "로딩중..."}
             {!isLoading && codeGroupList && (
                 <>
-                    <Link to="codegroup/create">새로만들기</Link>
+                    <Link to="/codegroup/create">새로만들기</Link>
                     <table border="1">
                         <thead>
                             <tr>
@@ -29,7 +29,7 @@ function CodeGroupList({ codeGroupList, isLoading }) {
                             )}
                             {!!codeGroupList.length && codeGroupList.map((codeGroup) => (
                                 <tr key={codeGroup.groupCode}>
-                                    <td align="center">{codeGroup.codeGroupCode}</td>
+                                    <td align="center">{codeGroup.groupCode}</td>
                                     <td align="left">
                                         <Link to={`/codegroup/read/${codeGroup.groupCode}`}>
                                             {codeGroup.groupName}

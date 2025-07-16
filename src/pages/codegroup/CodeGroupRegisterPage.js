@@ -7,8 +7,7 @@ function CodeGroupRegisterPage() {
 
     return (
         <MainLayout>
-            <CodeGroupRegisterContainer 
-            />
+            <CodeGroupRegisterContainer />
         </MainLayout>
     );
 }

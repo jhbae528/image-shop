@@ -31,9 +31,6 @@ const CodeGroupRegisterContainer = ({ groupCode }) => {
         }
     };
 
-    useEffect(() => {
-
-    }, [dispatch, groupCode]);
 
     return (
         <CodeGroupRegisterForm
