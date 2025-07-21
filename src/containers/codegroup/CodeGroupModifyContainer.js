@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CodeGroupModifyForm from "../../components/codegroup/CodeGroupModifyForm";
-import { readOne, READ_ONE } from "../../modules/codegroup";
+import { fetchOne, FETCH_ONE } from "../../modules/codegroup";
 import { useParams, useNavigate } from "react-router-dom";
 import * as api from "../../lib/api";
 
@@ -13,7 +13,7 @@ const CodeGroupModifyContainer = ({ groupCode }) => {
 
     const { codeGroup, isLoading } = useSelector(({ codegroup, loading }) => ({
         codeGroup: codegroup.codeGroup,
-        isLoading : loading[READ_ONE],
+        isLoading : loading[FETCH_ONE],
     }));
 
     const onModify = async(groupCode, groupName) => {
@@ -38,7 +38,7 @@ const CodeGroupModifyContainer = ({ groupCode }) => {
     };
 
     useEffect(() => {
-        dispatch(readOne(groupCode));
+        dispatch(fetchOne(groupCode));
     }, [dispatch, groupCode]);
 
     return (

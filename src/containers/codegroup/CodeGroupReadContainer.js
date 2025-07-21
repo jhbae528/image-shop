@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import CodeGroupRead from "../../components/codegroup/CodeGroupRead";
-import { readOne, READ_ONE } from "../../modules/codegroup";
+import { fetchOne, FETCH_ONE } from "../../modules/codegroup";
 import * as api from "../../lib/api";
 
 const CodeGroupReadContainer = ({ groupCode }) => {
@@ -13,11 +13,11 @@ const CodeGroupReadContainer = ({ groupCode }) => {
 
     const { codeGroup, isLoading } = useSelector(({ codegroup, loading }) => ({
         codeGroup: codegroup.codeGroup,
-        isLoading: loading[READ_ONE],
+        isLoading: loading[FETCH_ONE],
     }));
 
     useEffect(() => {
-        dispatch(readOne(groupCode));
+        dispatch(fetchOne(groupCode));
     }, [dispatch, groupCode]);
     
     const onRemove = async() => {
