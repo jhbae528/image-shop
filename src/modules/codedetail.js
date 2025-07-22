@@ -12,8 +12,8 @@ const FETCH_ONE_SUCCESS = "codeDetail/FETCH_ONE_SUCCESS";
 const FETCH_ONE_FAILURE = "codeDetail/FETCH_ONE_FAILURE";
 
 // 액션 생성 함수
-export const fetchList = createAction(FETCH_ONE, (groupCode, codeValue) => ({ groupCode, codeValue }));
-export const fetchOne = createAction(FETCH_LIST);
+export const fetchList = createAction(FETCH_LIST);
+export const fetchOne = createAction(FETCH_ONE, (groupCode, codeValue) => ({ groupCode, codeValue }));
 
 // 비동기 액션을 수행하는 태스크
 const fetchListSaga = createRequestSaga(FETCH_LIST, api.fetchCodeDetailList);
@@ -21,7 +21,7 @@ const fetchOneSage = createRequestSaga(FETCH_ONE, api.fetchCodeDeatil);
 
 // 코드 사가 함수
 export function* codeDetailSaga() {
-    console.log("module/codedetails => codeDetailSaga");
+    console.log("module/codedetail => codeDetailSaga");
     yield takeLatest(FETCH_LIST, fetchListSaga);
     yield takeLatest(FETCH_ONE, fetchOneSage);
 }
@@ -40,11 +40,11 @@ const codeDetailReducer = handleActions(
             ...state,
             codeDetails: [],
         }),
-        [FETCH_LIST_SUCCESS]: (state, { playload: data }) => ({
+        [FETCH_LIST_SUCCESS]: (state, { payload: data }) => ({
             ...state,
             codeDetails : data
         }),
-        [FETCH_LIST_FAILURE] : (state, { playload: data }) => ({
+        [FETCH_LIST_FAILURE] : (state, { payload: data }) => ({
             ...state,
             error: data,
         }),
@@ -52,11 +52,11 @@ const codeDetailReducer = handleActions(
             ...state,
             codeDetail: null,
         }),
-        [FETCH_ONE_SUCCESS]: (state, { playload: data }) => ({
+        [FETCH_ONE_SUCCESS]: (state, { payload: data }) => ({
             ...state,
             codeDetail : data
         }),
-        [FETCH_ONE_FAILURE] : (state, { playload: data }) => ({
+        [FETCH_ONE_FAILURE] : (state, { payload: data }) => ({
             ...state,
             error: data,
         }),

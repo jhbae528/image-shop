@@ -8,6 +8,10 @@ import CodeGroupListPage from "./pages/codegroup/CodeGroupListPage";
 import CodeGroupReadPage from "./pages/codegroup/CodeGroupReadPage";
 import CodeGroupModifyPage from "./pages/codegroup/CodeGroupModifyPage";
 import CodeGroupRegisterPage from "./pages/codegroup/CodeGroupRegisterPage";
+import CodeDetailListPage from "./pages/codedetail/CodeDetailListPage";
+import CodeDetailReadPage from "./pages/codedetail/CodeDetailReadPage";
+import CodeDetailModifyPage from "./pages/codedetail/CodeDetailModifyPage"
+import CodeDetailRegisterPage from "./pages/codedetail/CodeDetailRegisterPage";
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
       <Route path="/codegroup/read/:groupCode" element={<CodeGroupReadPage/>} />
       <Route path="/codegroup/edit/:groupCode" element={<CodeGroupModifyPage/>} />
       <Route path="/codegroup/create" element={<CodeGroupRegisterPage/>} />
+      <Route path="/codedetail" element={<CodeDetailListPage/>} />
+      <Route path="/codedetail/read/:groupCode/:codeValue" element={<CodeDetailReadPage/>} />
+      <Route path="/codedetail/deit/:groupCode/:codeValue" element={<CodeDetailModifyPage/>} />
+      <Route path="/codedetail/create" element={<CodeDetailRegisterPage/>} />
     </Routes>
   );
 }

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CodeGroupModifyForm from "../../components/codegroup/CodeGroupModifyForm";
 import { fetchOne, FETCH_ONE } from "../../modules/codegroup";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as api from "../../lib/api";
 
 const CodeGroupModifyContainer = ({ groupCode }) => {

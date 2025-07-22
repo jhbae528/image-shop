@@ -27,9 +27,9 @@ function CodeDetailRegisterForm({ onRegisger }) {
     };
 
     // 마운트될때 그룹코드 목록 가져옴
-    useEffect(() => {
+    // useEffect(() => {
 
-    }, []);
+    // }, []);
 
     return (
         <div align="center">

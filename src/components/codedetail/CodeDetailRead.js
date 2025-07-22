@@ -8,17 +8,17 @@ function CodeDetailRead({
     codeValue,
     onRemove
 }) {
-    const [groupCodes, setGroupCodes] = useState([]);
+//    const [groupCodes, setGroupCodes] = useState([]);
 
-    // 코드그룹 목록 가져옴
-    const getGroupCodeList = async () => {
+    // // 코드그룹 목록 가져옴
+    // const getGroupCodeList = async () => {
 
-    };
+    // };
 
-    // 마운트 될 때 그룹코드 목록 가져오
-    useEffect(() => {
+    // // 마운트 될 때 그룹코드 목록 가져오
+    // useEffect(() => {
 
-    }, []);
+    // }, []);
 
     return (
         <div align="center">

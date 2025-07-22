@@ -12,8 +12,10 @@ export const removeCodeGroup = (groupCode) => client.delete(`/codegroups/${group
 
 export const fetchCodeDetailList = () => client.get("codedetails");
 export const fetchCodeDeatil = (groupCode, codeValue) => client.get(`codedetails/${groupCode}/${codeValue}`);
-export const modifyCodeDetail = (groupCode, codeValue, codeName) => client.put(`/codegroups/${groupCode}${codeValue}`, { codeName });
+export const modifyCodeDetail = (groupCode, codeValue, codeName) => client.put(`/codedetails/${groupCode}${codeValue}`, { codeName });
+export const registerCodeDetail = (groupCode, codeValue, codeName) => client.post("/codedetails", { groupCode, codeValue, codeName });
+export const removeCodeDetail = (groupCode, codeValue) => client.delete(`/codedetails/${groupCode}/${codeValue}`);
+
+export const fetchGroupCodeList = () => client.get("codes/codeGroup");
 
 export const readItemApi = (itemId) => client.get(`/items/${itemId}`);
-
-//export default api;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import CodeGroupRead from "../../components/codegroup/CodeGroupRead";
 import { fetchOne, FETCH_ONE } from "../../modules/codegroup";
 import * as api from "../../lib/api";

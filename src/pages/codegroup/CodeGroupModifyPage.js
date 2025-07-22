@@ -1,5 +1,5 @@
 import react from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import CodeGroupModifyContainer from "../../containers/codegroup/CodeGroupModifyContainer";
 import MainLayout from "../../layout/MainLayout";
 
