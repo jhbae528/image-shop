@@ -18,7 +18,8 @@ const CodeDetailReadContainer = ({ groupCode, codeValue }) => {
     }));
 
     useEffect(() => {
-
+        console.log("container/codedetail/CodeDetailReadContainer.useEffect => fetchOne");
+        dispatch(fetchOne(groupCode, codeValue));
     }, [dispatch, groupCode, codeValue]);
 
     const onRemove = async() => {

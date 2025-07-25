@@ -13,7 +13,7 @@ const FETCH_ONE_FAILURE = "codeDetail/FETCH_ONE_FAILURE";
 
 // 액션 생성 함수
 export const fetchList = createAction(FETCH_LIST);
-export const fetchOne = createAction(FETCH_ONE, (groupCode, codeValue) => ({ groupCode, codeValue }));
+export const fetchOne = createAction(FETCH_ONE, (groupCode, codeValue) => ( {groupCode, codeValue} ));
 
 // 비동기 액션을 수행하는 태스크
 const fetchListSaga = createRequestSaga(FETCH_LIST, api.fetchCodeDetailList);
@@ -38,11 +38,11 @@ const codeDetailReducer = handleActions(
     {
         [FETCH_LIST]: (state) => ({
             ...state,
-            codeDetails: [],
+            codeDetailList: [],
         }),
         [FETCH_LIST_SUCCESS]: (state, { payload: data }) => ({
             ...state,
-            codeDetails : data
+            codeDetailList : data
         }),
         [FETCH_LIST_FAILURE] : (state, { payload: data }) => ({
             ...state,

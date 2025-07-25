@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import CodeDetailList from "../../components/codedetail/CdoeDetailList";
+import CodeDetailList from "../../components/codedetail/CodeDetailList";
 import { fetchList, FETCH_LIST } from "../../modules/codedetail";
 
 const CodeDetailListContainer = () => {
@@ -13,7 +13,7 @@ const CodeDetailListContainer = () => {
 
     // 마운트 될때 코드 목록 가져옴
     useEffect(() => {
-
+        dispatch(fetchList());
     }, [dispatch]);
 
     return <CodeDetailList

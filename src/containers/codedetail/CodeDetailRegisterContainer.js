@@ -12,7 +12,7 @@ const CodeDetailRegisterContainer = () => {
             const response = await api.registerCodeDetail(groupCode, codeValue, codeName);
             alert("등록이 완료되었습니다.");
 
-            navigate("/codegroup/read/" + response.data.groupCode);
+            navigate(`/codedetail/read/${response.data.groupCode}${response.data.codeValue}`);
         } catch(e) {
             if(e.response.status === 400) {
                 alert("잘못된 요청입니다.");

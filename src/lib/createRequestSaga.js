@@ -12,7 +12,8 @@ export default function createRequestSaga(type, request) {
     const callFailure = createAction(CALL_FAILURE, (e) => e);
 
     return function*(action) {
-        console.log("createRequestSaga action = " + action);
+        console.log("createRequestSaga action.type = " + action.type);
+        console.log("createRequestSaga action.payload = " + action.payload);
         
         yield put(startLoading(type));
         try{
