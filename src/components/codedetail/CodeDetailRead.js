@@ -24,7 +24,7 @@ function CodeDetailRead({
 
     // 마운트 될 때 그룹코드 목록 가져오기
     useEffect(() => {
-        console.log("components/codedetail/CodeDetailRead.useEffect => getGroupCodeList");
+        console.log("components/codedetail/CodeDetailRead => useEffect -> getGroupCodeList");
         getGroupCodeList();
     }, []);
 
@@ -73,7 +73,7 @@ function CodeDetailRead({
 
                     <Link to={`/codedetail/edit/${groupCode}/${codeValue}`}>편집</Link>
                     <button onClick={onRemove}>삭제</button>
-                    <Link to="/codeDetail">목록</Link>
+                    <Link to="/codedetail">목록</Link>
                 </>
             )}
         </div>

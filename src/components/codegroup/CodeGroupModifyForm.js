@@ -23,6 +23,7 @@ function CodeGroupModifyForm({
 
     // 마운트될때 기존의 코드그룹명을 가져옴
     useEffect(() => {
+        console.log("components/codegroup/CodeGroupModifyForm => useEffect -> setGroupName");
         if(codeGroup) {
             setGroupName(codeGroup.groupName);
         }

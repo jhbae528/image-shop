@@ -18,10 +18,12 @@ const CodeDetailModifyContainer = ({ groupCode, codeValue }) => {
     }));
 
     const onModify = async(groupCode, codeValue, codeName) => {
+        console.log("components/codegroup/CodeDetailModifyContainer => onModify");
         try {
-            const response = await api.modifyCodeGroup(groupCode, codeValue, codeName);
+            const response = await api.modifyCodeDetail(groupCode, codeValue, codeName);
             alert("수정이 완료되었습니다.");
 
+            navigate(`/codedetail/read/${groupCode}/${codeValue}`);
         } catch(e) {
             if(e.response.status === 400) {
                 alert("잘못된 요청입니다.");
@@ -38,7 +40,7 @@ const CodeDetailModifyContainer = ({ groupCode, codeValue }) => {
     };
 
     useEffect(() => {
-
+        dispatch(fetchOne(groupCode, codeValue));
     }, [dispatch, groupCode, codeValue]);
 
     return (

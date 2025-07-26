@@ -21,6 +21,7 @@ const CodeGroupReadContainer = ({ groupCode }) => {
     }, [dispatch, groupCode]);
     
     const onRemove = async() => {
+        console.log("container/codegroup/CodeGroupReadContainer => onRemove");
         try{
             const response = await api.removeCodeGroup(groupCode);
             alert("삭제되었습니다.");

@@ -25,7 +25,7 @@ function App() {
       <Route path="/codegroup/create" element={<CodeGroupRegisterPage/>} />
       <Route path="/codedetail" element={<CodeDetailListPage/>} />
       <Route path="/codedetail/read/:groupCode/:codeValue" element={<CodeDetailReadPage/>} />
-      <Route path="/codedetail/deit/:groupCode/:codeValue" element={<CodeDetailModifyPage/>} />
+      <Route path="/codedetail/edit/:groupCode/:codeValue" element={<CodeDetailModifyPage/>} />
       <Route path="/codedetail/create" element={<CodeDetailRegisterPage/>} />
     </Routes>
   );

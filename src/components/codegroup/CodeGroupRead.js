@@ -39,7 +39,7 @@ function CodeGroupRead({
                     </table>
                     <Link to={`/codegroup/edit/${groupCode}`}>편집</Link>
                     <button onClick={onRemove}>삭제</button>
-                    <Link to="/codeGroup">목록</Link>
+                    <Link to="/codegroup">목록</Link>
                 </>
             )}
         </div>

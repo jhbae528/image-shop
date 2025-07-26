@@ -8,6 +8,7 @@ const CodeGroupRegisterContainer = () => {
     const navigate = useNavigate();
 
     const onRegister = async(groupCode, groupName) => {
+        console.log("container/codegroup/CodeGroupRegisterContainer => onRegister");
         try{
             const response = await api.registerCodeGroup(groupCode, groupName);
             alert("등록이 완료되었습니다.");
