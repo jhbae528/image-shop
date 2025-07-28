@@ -73,7 +73,7 @@ function MemberRegisterForm( {onRegister} ) {
                             <td>
                                 <input
                                     type="text"
-                                    value={userId}
+                                    value={password}
                                     onChange={handleChangePassword}
                                 />
                             </td>
@@ -83,7 +83,7 @@ function MemberRegisterForm( {onRegister} ) {
                             <td>
                                 <input
                                     type="text"
-                                    value={userId}
+                                    value={userName}
                                     onChange={handleChangeUserName}
                                 />
                             </td>

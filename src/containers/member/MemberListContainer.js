@@ -8,17 +8,18 @@ const MemberListContainer = () => {
     const dispatch = useDispatch();
 
     const { memberList, isLoading } = useSelector(({member, loading}) => ({
-
+        memberList: member.memberList,
+        isLoading: loading[FETCH_LIST],
     }));
 
     useEffect(() => {
-
+        dispatch(fetchList());
     }, [dispatch]);
 
     return <MemberList
-        memberList={memberList}
-        isLoading={isLoading}
-    />
+                memberList={memberList}
+                isLoading={isLoading}
+            />
 }
 
 export default MemberListContainer;
