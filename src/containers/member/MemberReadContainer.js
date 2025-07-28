@@ -12,23 +12,25 @@ const MemberReadContainer = ({ userNo }) => {
     const { member, isLoading } = useSelector(({ member, loading }) => ({
 
     }));
+
+    useEffect(() => {
+
+    }, [dispatch, userNo]);
+
+    const onRemove = async () => {
+
+    };
+
+    return (
+        <MemberRead
+            member={member}
+            isLoading={isLoading}
+            userNo={userNo}
+            onRemove={onRemove}
+        />
+    )
 };
 
-useEffect(() => {
 
-}, [dispatch, userNo]);
-
-const onRemove = async () => {
-
-};
-
-return (
-    <MemberRead
-        member={member}
-        isLoading={isLoading}
-        userNo={userNo}
-        onRemove={onRemove}
-    />
-)
 
 export default MemberReadContainer;
