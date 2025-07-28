@@ -1,5 +1,6 @@
 import React from "react";
 import { connect, useDispatch } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
 import MainHeader from "../../components/common/MainHeader";
 import { getAuthorized } from "../../modules/selector";
 import { setAccessToken, setMyInfo } from "../../modules/auth";
@@ -8,6 +9,8 @@ import Cookies from "js-cookie";
 
 // 로그인여부의 로그인한 사용자 정보 속성값으로 수신
 const MainHeaderContainer = ({ isAuthorized, myInfo }) => {
+
+    const navigate = useNavigate();
 
     const dispatch = useDispatch();
 
@@ -18,6 +21,8 @@ const MainHeaderContainer = ({ isAuthorized, myInfo }) => {
 
         dispatch(setAccessToken(""));
         dispatch(setMyInfo(null));
+
+        navigate("/");
     }
 
     return (

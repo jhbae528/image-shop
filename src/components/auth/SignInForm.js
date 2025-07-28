@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function SignInForm({ onSignIn }) {
 
@@ -56,6 +57,10 @@ function SignInForm({ onSignIn }) {
                     </tbody>
                 </table>
             </form>
+
+            <p>
+                <Link to="/signup">회원가입</Link>
+            </p>
         </div>
     );
 }

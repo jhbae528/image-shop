@@ -1,5 +1,4 @@
 import React from "react";
-//import MainHeader from "../components/common/MainHeader";
 import MenuBarContainer from "../containers/common/MenuBarContainer";
 import Footer from "../components/common/Footer";
 import MainHeaderContainer from "../containers/common/MainHeaderContainer";

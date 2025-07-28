@@ -64,6 +64,7 @@ function* loginSaga(action) {
 }
 
 function* checkMyInfoSaga() {
+    console.log("module/auth => checkMyInfoSaga -> setMyInfo");
     try {
         const response = yield call(api.getMyInfo);
 

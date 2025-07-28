@@ -22,7 +22,7 @@ const fetchOneSaga = createRequestSaga(FETCH_ONE, api.fetchCodeGroup);
 
 // 코드그룹 사가 함수
 export function* codeGroupSaga() {
-    console.log("module/codegroup => codeGroupSaga");
+    console.log("module/codegroup => codeGroupSaga -> fetchListSaga / fetchOneSage");
     yield takeLatest(FETCH_LIST, fetchListSaga);
     yield takeLatest(FETCH_ONE, fetchOneSaga);
 }
@@ -63,6 +63,6 @@ const codeGroupReducer = handleActions(
         }),
     },
     initialState
-)
+);
 
 export default codeGroupReducer;

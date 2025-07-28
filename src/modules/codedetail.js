@@ -21,7 +21,7 @@ const fetchOneSage = createRequestSaga(FETCH_ONE, api.fetchCodeDeatil);
 
 // 코드 사가 함수
 export function* codeDetailSaga() {
-    console.log("module/codedetail => codeDetailSaga");
+    console.log("module/codedetail => codeDetailSaga -> fetchListSaga / fetchOneSage");
     yield takeLatest(FETCH_LIST, fetchListSaga);
     yield takeLatest(FETCH_ONE, fetchOneSage);
 }

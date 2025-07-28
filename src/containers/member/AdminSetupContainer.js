@@ -1,6 +1,6 @@
 import React from "react";
 import AdminSetupForm from "../../components/member/AdminSetupForm";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as api from "../../lib/api";
 
 const AdminSetupContainer = () =>{

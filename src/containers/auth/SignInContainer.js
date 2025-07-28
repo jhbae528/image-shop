@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import SignInForm from "../../components/auth/SignInForm";
 import { login, checkMyInfo } from "../../modules/auth";
 
