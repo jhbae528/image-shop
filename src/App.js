@@ -41,8 +41,8 @@ function App() {
       <Route path="/codedetail/create" element={<CodeDetailRegisterPage/>} />
       {/* 멤버 관리 */}
       <Route path="/member" element={<MemberListPage/>} />
-      <Route path="/member/read/:userId" element={<MemberReadPage/>} />
-      <Route path="/member/edit/:userId" element={<MemberModifyPage/>} />
+      <Route path="/member/read/:userNo" element={<MemberReadPage/>} />
+      <Route path="/member/edit/:userNo" element={<MemberModifyPage/>} />
       <Route path="/member/create" element={<MemberRegisterPage/>} />
     </Routes>
   );
