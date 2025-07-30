@@ -31,7 +31,7 @@ export const removeCodeDetail = (groupCode, codeValue) => client.delete(`/codede
 // 멤버
 export const fetchMemberList = () => client.get("users");
 export const fetchMember = (userNo) => client.get(`/users/${userNo}`);
-export const modifyMember = (userNo, payload) => client.put(`/users/${userNo}`, { payload });
+export const modifyMember = (userNo, payload) => client.put(`/users/${userNo}`, payload);
 export const registerMember = (userId, userPw, userName, job) => client.post("/users", { userId, userPw, userName, job });
 export const removeMember = (userNo) => client.delete(`/users/${userNo}`);
 
